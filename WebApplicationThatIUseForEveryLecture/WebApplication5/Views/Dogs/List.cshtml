@@ -1,0 +1,19 @@
+﻿@model List<DogViewModel>
+
+<h2>
+    @Model.Count cats in te system
+</h2>
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var dog in Model)
+        {
+            <li>Name: @dog.Name @dog.Age years old owned by @dog.Owner</li>
+        }
+    </ul>
+}
+else
+{
+	   <h3>No cats in the system!</h3>
+}

@@ -1,0 +1,14 @@
+﻿<h1>
+    <a href="/Home/English">English</a>
+    <a href="/Home/Bulgarian">Bulgarian</a>
+</h1>
+
+@if (this.Context.Request.Cookies.ContainsKey("Language") &&
+  this.Context.Request.Cookies["Language"] == "bg")
+{
+    <h2>Страницата е на БГ!</h2>
+}
+else
+{
+    <h2>Web site is in English!</h2>
+}
